@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Matches the snapshot 1`] = `
+<div
+  className="alert alert-info"
+>
+  <h3>
+    Some other stuff
+  </h3>
+  <button
+    className="btn btn-success"
+  >
+    Button
+  </button>
+  <div
+    className="m-5"
+  >
+    <div
+      className="card p-3 sscs-card"
+    >
+      Here is a BS4 card
+    </div>
+  </div>
+</div>
+`;
