@@ -1,11 +1,25 @@
-import React from 'react'
-// import PropTypes from 'prop-types'
+import React, { Component } from 'react';
+import { connect } from 'react-redux'
 
-const Dashboard = () => (
-  <div>Our dashboard</div>
-)
+import UsersTable from 'components/UsersTable';
 
-Dashboard.propTypes = {}
-Dashboard.defaultProps = {}
+class Dashboard extends Component {
+  state = {};
 
-export default Dashboard
+  render() {
+    return (
+      <div>
+        <h1>Dashboard</h1>
+
+        // passing users from state down to the view component
+        <UsersTable users={this.props.users} />
+      </div>
+    );
+  }
+}
+
+const mapState = state => ({
+  users: state.users,
+});
+
+export default connect(mapState)(Dashboard);
